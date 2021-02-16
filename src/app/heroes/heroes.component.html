@@ -1,0 +1,31 @@
+<div class="row m-4">
+  <div class="col-md-12">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="fa fa-filter" aria-hidden="true"></i>
+        </span>
+      </div>
+      <input type="text" class="form-control" placeholder="ide jon a filter">
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id:</th>
+      <th>Name:</th>
+      <th>SuperPower:</th>
+      <th>Address:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of herolist | async">
+      <td>{{hero.id}}</td>
+      <td>{{hero.name}}</td>
+      <td>{{hero.superPower}}</td>
+      <td>{{hero.address}}</td>
+    </tr>
+  </tbody>
+</table>
